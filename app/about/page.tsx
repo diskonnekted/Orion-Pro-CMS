@@ -1,6 +1,8 @@
 import { pool } from '@/lib/db';
 import OrionPromoAbout from '@/components/themes/orion-promo/About';
 import SmartVillageAbout from '@/components/themes/smartvillage/About';
+import OrionSchoolAbout from '@/components/themes/orion-school/About';
+import OrionPortfolioAbout from '@/components/themes/orion-portfolio/About';
 
 async function getActiveTheme() {
   try {
@@ -16,6 +18,14 @@ export default async function AboutPage() {
   
   if (theme === 'smartvillage') {
     return <SmartVillageAbout />;
+  }
+  
+  if (theme === 'orion-school') {
+    return <OrionSchoolAbout />;
+  }
+
+  if (theme === 'orion-portfolio') {
+    return <OrionPortfolioAbout />;
   }
   
   return <OrionPromoAbout />;

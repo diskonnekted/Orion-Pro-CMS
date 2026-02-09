@@ -1,6 +1,8 @@
 import { pool } from '@/lib/db';
 import OrionPromoContact from '@/components/themes/orion-promo/Contact';
 import SmartVillageContact from '@/components/themes/smartvillage/Contact';
+import OrionSchoolContact from '@/components/themes/orion-school/Contact';
+import OrionPortfolioContact from '@/components/themes/orion-portfolio/Contact';
 
 async function getActiveTheme() {
   try {
@@ -16,6 +18,14 @@ export default async function ContactPage() {
   
   if (theme === 'smartvillage') {
     return <SmartVillageContact />;
+  }
+  
+  if (theme === 'orion-school') {
+    return <OrionSchoolContact />;
+  }
+
+  if (theme === 'orion-portfolio') {
+    return <OrionPortfolioContact />;
   }
   
   return <OrionPromoContact />;

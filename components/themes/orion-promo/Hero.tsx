@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-brand-50 via-white to-blue-50 overflow-hidden relative">
+    <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden relative">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         <img src="/assets/img/hero-bg.svg" alt="Pattern" className="absolute inset-0 w-full h-full object-cover opacity-40" />
       </div>
@@ -14,27 +14,27 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Hero Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-brand-100 text-brand-600 text-sm font-semibold mb-6 shadow-sm animate-fade-in-up">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-indigo-100 text-indigo-600 text-sm font-semibold mb-6 shadow-sm animate-fade-in-up">
               <span className="flex h-2 w-2 relative mr-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              Orion CMS v1.0 Resmi Dirilis
+              Orion Pro: The Ultimate IoT & Automation Platform
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-              Bangun Web <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-purple-600">Tanpa Batas</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+              Transform Your IoT Projects with <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Professional Control</span>
             </h1>
 
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Platform manajemen konten modern yang menggabungkan performa tinggi, keamanan tingkat lanjut, dan kemudahan penggunaan untuk developer maupun pemula.
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Orion Pro adalah platform CMS khusus yang dirancang untuk para praktisi otomasi dan IoT profesional. Dengan teknologi NextJS yang powerful, kami menyediakan dasbor lengkap untuk mengembangkan, memonitor, dan mengoperasikan peralatan IoT Anda dengan presisi tinggi.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <Link href="/?page=download" className="px-8 py-4 bg-brand-600 text-white rounded-full font-bold text-lg hover:bg-brand-700 transition shadow-xl shadow-brand-500/20 transform hover:-translate-y-1 flex items-center justify-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                Download Gratis
+              <Link href="/contact" className="px-8 py-4 bg-indigo-600 text-white rounded-full font-bold text-lg hover:bg-indigo-700 transition shadow-xl shadow-indigo-500/20 transform hover:-translate-y-1 flex items-center justify-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                Hubungi Kami
               </Link>
               <Link href="#features" className="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-bold text-lg hover:bg-slate-50 transition hover:border-slate-300 flex items-center justify-center">
                 Pelajari Fitur
@@ -44,11 +44,11 @@ export default function Hero() {
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500 font-medium">
               <div className="flex items-center">
                 <svg className="w-5 h-5 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Open Source
+                Real-time Monitoring
               </div>
               <div className="flex items-center">
                 <svg className="w-5 h-5 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Tanpa Biaya Bulanan
+                High Precision Control
               </div>
             </div>
           </div>

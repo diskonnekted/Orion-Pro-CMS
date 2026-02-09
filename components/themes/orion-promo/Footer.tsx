@@ -6,13 +6,13 @@ export default function Footer() {
         <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                 <div className="mb-6 md:mb-0 text-left">
-                    <img src="/assets/img/orion-light.png" alt="Orion CMS" className="h-16 mb-4 block" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Orion CMS</h3>
-                    <p className="text-slate-400 max-w-xs">Platform manajemen konten modern yang dirancang super ringan dan difokuskan pada kecepatan.</p>
+                    <img src="/assets/img/orion-light.png" alt="Orion Pro" className="h-16 mb-4 block" />
+                    <h3 className="text-2xl font-bold text-white mb-2">Orion Pro</h3>
+                    <p className="text-slate-400 max-w-xs">Where Professional IoT Meets Powerful Technology. Platform manajemen konten khusus untuk praktisi otomasi dan IoT.</p>
                 </div>
                 <div className="flex space-x-6">
-                    <Link href="/?page=documentation" className="hover:text-brand-400 transition">Dokumentasi</Link>
-                    <a href="https://github.com/diskonnekted/Orion-CMS" target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition">GitHub</a>
+                    <Link href="/about" className="hover:text-brand-400 transition">Tentang Kami</Link>
+                    <Link href="/contact" className="hover:text-brand-400 transition">Hubungi Kami</Link>
                 </div>
             </div>
             <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">

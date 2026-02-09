@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orion Pro CMS
 
-## Getting Started
+Orion Pro is a modern, dynamic CMS built with **Next.js 15**, **MySQL**, and **Tailwind CSS**. It features a robust theme system, plugin architecture, and IoT integration capabilities.
 
-First, run the development server:
+## 🚀 Recent Updates (February 2026)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Orion EWS Pro Theme (Disaster Early Warning System)
+A specialized theme for disaster monitoring and public awareness.
+- **Real-time Monitoring**: Dashboard for Flood (Ultrasonic), Earthquake (Vibration), and Landslide (Gyroscope) sensors.
+- **Weather Page**: Integrated with **BMKG API** to display real-time extreme weather alerts and a dynamic **Highcharts Map** of Indonesia.
+- **Alert System**: Visual warning signals based on sensor thresholds.
+- **Public Education**: Dedicated sections for disaster preparedness information.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. IoT Device Management Enhancements
+The Admin Panel (`/admin/iot`) has been significantly upgraded:
+- **Project Association**: Devices can now be assigned to specific themes (e.g., Orion EWS Pro, Smart Village).
+- **Dynamic Sensor Config**: JSON-based configuration allows defining custom sensors (Key, Label, Unit, Type) per device.
+- **Preset Configurations**: Auto-populate sensor configs based on the selected project type.
+- **Edit Capability**: Full CRUD support for IoT devices, including editing existing configurations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Orion Learning Theme
+A theme focused on educational content (e.g., Screen Printing Workshop).
+- **Registration Flow**: Dedicated registration page (`/register`) replacing the default login link for students.
+- **Lesson Page**: Sidebar navigation for curriculum content (`/learn`).
+- **Visuals**: Integrated assets for step-by-step guides.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Smart Village Theme
+- **IoT Integration**: Connected to `orion_iot_telemetry` for real-time agricultural monitoring.
+- **Dashboard**: Visualizes temperature, humidity, and soil moisture data.
 
-## Learn More
+## 🛠 Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Dynamic Theme System**: Switch frontend themes instantly via Admin Panel (DB-driven).
+- **Plugin Architecture**: Enable/Disable features like Smart Farm IoT via database.
+- **Role-Based Access**: Admin and User roles with capability management.
+- **Next.js Server Actions**: Secure and efficient data mutations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/diskonnekted/Orion-Pro-CMS.git
+    cd orionpro
+    ```
 
-## Deploy on Vercel
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  Configure Database:
+    - Update `lib/db.ts` with your MySQL credentials.
+    - Run migration scripts (if available) or import the `orion_pro.sql` schema.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  Run Development Server:
+    ```bash
+    npm run dev
+    ```
+
+5.  Open [http://localhost:3000](http://localhost:3000).
+
+## 📝 Configuration
+
+- **Active Theme**: Change the `active_theme` value in `orion_options` table (or via Admin Panel).
+- **IoT Devices**: Manage devices at `/admin/iot`.
+
+## 🤝 Contribution
+
+Feel free to submit issues and pull requests.
+
+## 📄 License
+
+[MIT](LICENSE)

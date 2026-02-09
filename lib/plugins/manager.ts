@@ -127,6 +127,6 @@ export async function togglePluginStatus(slug: string, currentStatus: 'active' |
     [newStatus, slug]
   );
   
-  revalidatePath('/admin/plugins');
+  revalidatePath('/admin', 'layout');
   return { success: true, status: newStatus };
 }

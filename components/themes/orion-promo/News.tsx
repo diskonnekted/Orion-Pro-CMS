@@ -41,8 +41,16 @@ export default async function News() {
                                     </div>
                                 </div>
                             ) : (
-                                <div className="h-56 bg-slate-100 flex items-center justify-center text-slate-400 relative">
-                                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <div className="h-56 overflow-hidden relative">
+                                    <img 
+                                      src={`https://images.unsplash.com/photo-${[
+                                        '1499750310159-5298019bc0d2',
+                                        '1517694712202-14dd9538aa97',
+                                        '1531297461368-08ad7d43f5b8'
+                                      ][post.ID % 3]}?auto=format&fit=crop&w=800&q=80`} 
+                                      alt={post.post_title} 
+                                      className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500" 
+                                    />
                                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-brand-600 uppercase tracking-wide">
                                         Article
                                     </div>
