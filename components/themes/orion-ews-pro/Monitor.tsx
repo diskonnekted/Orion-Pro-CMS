@@ -165,7 +165,7 @@ export default function Monitor() {
                     <div 
                       key={i} 
                       className={`flex-1 rounded-t-sm transition-all duration-100 ${i/20 < sensors.earthquake.vibration * 2 ? 'bg-red-500' : 'bg-slate-800'}`}
-                      style={{ height: `${20 + Math.random() * 80}%` }}
+                      style={{ height: `${20 + ((i * 37) % 80)}%` }}
                     ></div>
                  ))}
               </div>

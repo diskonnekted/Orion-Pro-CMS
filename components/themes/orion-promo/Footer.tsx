@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                 <div className="mb-6 md:mb-0 text-left">
-                    <img src="/assets/img/orion-light.png" alt="Orion Pro" className="h-16 mb-4 block" />
+                    <img src="/orion-light.png" alt="Orion Pro" className="h-16 mb-4 block" />
                     <h3 className="text-2xl font-bold text-white mb-2">Orion Pro</h3>
                     <p className="text-slate-400 max-w-xs">Where Professional IoT Meets Powerful Technology. Platform manajemen konten khusus untuk praktisi otomasi dan IoT.</p>
                 </div>

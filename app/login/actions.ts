@@ -14,6 +14,13 @@ export async function login(prevState: any, formData: FormData) {
   }
 
   try {
+    console.log('DEBUG: Attempting login for user:', username);
+    
+    if (!pool || typeof pool.query !== 'function') {
+      console.error('DEBUG: Database pool is not initialized');
+      return { error: 'Database configuration error.' };
+    }
+
     // Check if user exists (by username or email)
     const [rows] = await pool.query(
       'SELECT ID, user_login, user_pass, user_email FROM orion_users WHERE user_login = ? OR user_email = ?', 
@@ -23,28 +30,45 @@ export async function login(prevState: any, formData: FormData) {
     const users = rows as any[];
 
     if (users.length === 0) {
+      console.log('DEBUG: User not found in database:', username);
       return { error: 'Invalid username or password.' };
     }
 
     const user = users[0];
+    console.log('DEBUG: Found user:', user.user_login);
 
     // Verify password
-    // Note: PHP password_hash uses bcrypt, so bcryptjs should work.
-    // PHP hashes often start with $2y$, which bcryptjs might verify correctly or need replacement.
-    // We replace $2y$ with $2a$ just in case bcryptjs is strict.
-    const validPassword = await bcrypt.compare(password, user.user_pass.replace(/^\$2y\$/, '$2a$'));
+    const hashedPassword = user.user_pass.replace(/^\$2y\$/, '$2a$');
+    const validPassword = await bcrypt.compare(password, hashedPassword);
 
     if (!validPassword) {
+      console.log('DEBUG: Invalid password for user:', username);
       return { error: 'Invalid username or password.' };
     }
 
+    console.log('DEBUG: Login successful for user:', user.user_login);
     // Create session
     await createSession(user.ID);
 
-  } catch (error) {
-    console.error('Login error:', error);
-    return { error: 'An error occurred during login.' };
-  }
+  } catch (error: any) {
+     console.error('DEBUG: Login error details:', {
+       message: error?.message,
+       code: error?.code,
+       errno: error?.errno,
+       sqlState: error?.sqlState
+     });
+     
+     if (error?.code === 'ECONNREFUSED') {
+       return { error: 'Database connection failed. Please ensure MySQL is running on 127.0.0.1:3306.' };
+     }
+     if (error?.code === 'ER_BAD_DB_ERROR') {
+       return { error: 'Database "orion_cms" not found. Please create it in phpMyAdmin.' };
+     }
+     if (error?.code === 'ER_ACCESS_DENIED_ERROR') {
+       return { error: 'Access denied for user "root". Check your database password.' };
+     }
+     return { error: 'Login failed: ' + (error?.message || 'Unknown error') };
+   }
   
   redirect('/admin');
 }

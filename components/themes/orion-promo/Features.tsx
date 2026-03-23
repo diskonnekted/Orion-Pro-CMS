@@ -6,7 +6,9 @@ export default function Features() {
         <div className="flex flex-col md:flex-row items-center gap-16 mb-24">
           <div className="md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-100 to-purple-100 rounded-full filter blur-3xl opacity-50 transform -translate-x-10"></div>
-            <img src="/assets/img/magazine.png" alt="Theme Showcase" className="relative rounded-2xl shadow-2xl border border-slate-100 transform hover:scale-105 transition duration-500" />
+            <div className="relative aspect-video rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Theme Showcase" className="w-full h-full object-cover" />
+            </div>
           </div>
           <div className="md:w-1/2">
             <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
@@ -37,7 +39,9 @@ export default function Features() {
         <div className="flex flex-col md:flex-row-reverse items-center gap-16">
           <div className="md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-green-100 rounded-full filter blur-3xl opacity-50 transform translate-x-10"></div>
-            <img src="/assets/img/smartvillage.png" alt="Technology" className="relative rounded-2xl shadow-2xl border border-slate-100 transform hover:scale-105 transition duration-500" />
+            <div className="relative aspect-video rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&w=800&q=80" alt="Technology" className="w-full h-full object-cover" />
+            </div>
           </div>
           <div className="md:w-1/2">
             <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6">
@@ -55,6 +59,45 @@ export default function Features() {
               <div className="p-4 bg-slate-50 rounded-lg text-center w-36 border border-slate-100">
                 <div className="text-xl font-bold text-purple-600 mb-1">PWA</div>
                 <div className="text-xs text-slate-500 font-medium">Ready Capabilities</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="flex flex-col md:flex-row items-center gap-16 mt-24">
+          <div className="md:w-1/2 relative">
+            <div className="absolute inset-0 bg-gradient-to-tr from-orange-100 to-red-100 rounded-full filter blur-3xl opacity-50 transform -translate-x-10"></div>
+            <div className="relative aspect-video rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Customization" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="md:w-1/2">
+            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Kustomisasi Tanpa Batas</h2>
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              Sesuaikan tampilan dan fungsionalitas website Anda dengan editor tema yang intuitif dan sistem plugin yang fleksibel.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="mt-1 bg-orange-100 p-1 rounded-md mr-4">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-800">Theme Editor Pro</h4>
+                  <p className="text-slate-500 text-sm">Ubah warna, font, dan tata letak secara real-time melalui area admin.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="mt-1 bg-orange-100 p-1 rounded-md mr-4">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-800">Modular Architecture</h4>
+                  <p className="text-slate-500 text-sm">Tambahkan fitur baru dengan mudah menggunakan sistem plugin kami yang powerful.</p>
+                </div>
               </div>
             </div>
           </div>

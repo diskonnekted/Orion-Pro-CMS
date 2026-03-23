@@ -10,14 +10,21 @@ interface Post {
 }
 
 export default async function News() {
-  const [posts] = await pool.query<any[]>(`
-    SELECT p.*, pm.meta_value as featured_image_url 
-    FROM orion_posts p
-    LEFT JOIN orion_postmeta pm ON p.ID = pm.post_id AND pm.meta_key = '_thumbnail_url'
-    WHERE p.post_status = 'publish' AND p.post_type = 'post'
-    ORDER BY p.post_date DESC 
-    LIMIT 3
-  `);
+  let posts: Post[] = [];
+  try {
+    const [rows] = await pool.query<any[]>(`
+      SELECT p.*, pm.meta_value as featured_image_url 
+      FROM orion_posts p
+      LEFT JOIN orion_postmeta pm ON p.ID = pm.post_id AND pm.meta_key = '_thumbnail_url'
+      WHERE p.post_status = 'publish' AND p.post_type = 'post'
+      ORDER BY p.post_date DESC 
+      LIMIT 3
+    `);
+    posts = rows;
+  } catch (error) {
+    console.error('DEBUG: Error fetching news:', error);
+    posts = [];
+  }
 
   return (
     <section id="news" className="py-20 bg-white">

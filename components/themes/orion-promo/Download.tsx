@@ -62,12 +62,12 @@ export default async function Download() {
                         <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-brand-200">
                             <div className="flex items-center">
                                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                PHP 7.4+
+                                Node.js 18+
                             </div>
                             <div className="hidden sm:block w-1 h-1 bg-brand-400 rounded-full"></div>
                             <div className="flex items-center">
                                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
-                                MySQL 5.7+
+                                MySQL 8.0+
                             </div>
                             <div className="hidden sm:block w-1 h-1 bg-brand-400 rounded-full"></div>
                             <div className="flex items-center">
@@ -79,7 +79,7 @@ export default async function Download() {
                     
                     <div className="relative z-10 flex flex-col items-center gap-3 min-w-[200px]">
                         <a href={`/download/${coreFile}`} className="w-full px-8 py-4 bg-white text-brand-600 rounded-xl font-bold text-lg hover:bg-brand-50 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center flex items-center justify-center">
-                            Download Orion
+                            Download Orion Pro
                             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         </a>
                         <span className="text-brand-200 text-sm font-medium">{coreSize} • ZIP Archive</span>
@@ -95,11 +95,60 @@ export default async function Download() {
         </section>
       )}
 
-      {/* Themes & Plugins Grid Placeholder */}
+      {/* Themes & Plugins Grid */}
       <section className="py-16 bg-slate-50 min-h-[40vh]">
-          <div className="container mx-auto px-6 text-center">
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Official Themes & Plugins</h3>
-              <p className="text-slate-500">Coming soon...</p>
+          <div className="container mx-auto px-6">
+              <div className="text-center mb-12">
+                  <h3 className="text-3xl font-bold text-slate-800 mb-4">Official Themes & Plugins</h3>
+                  <p className="text-slate-500 max-w-xl mx-auto">Tingkatkan fungsionalitas website Anda dengan koleksi ekstensi resmi yang telah dioptimasi.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {/* Theme 1 */}
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+                      <div className="h-48 bg-slate-200 relative">
+                          <img src="/assets/img/portfolio/smartvillage.png" alt="Smart Village" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-6">
+                          <div className="flex justify-between items-start mb-4">
+                              <h4 className="font-bold text-xl text-slate-900">Smart Village</h4>
+                              <span className="px-2 py-1 bg-green-100 text-green-600 text-[10px] font-bold uppercase rounded">Theme</span>
+                          </div>
+                          <p className="text-slate-500 text-sm mb-6">Tema khusus untuk monitoring desa cerdas dengan integrasi sensor real-time.</p>
+                          <button className="w-full py-2 bg-slate-100 text-slate-600 rounded-lg font-bold text-sm hover:bg-slate-200 transition">Coming Soon</button>
+                      </div>
+                  </div>
+
+                  {/* Plugin 1 */}
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+                      <div className="h-48 bg-slate-200 relative">
+                          <img src="/plugins/orion-shop-manager.png" alt="Shop Manager" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-6">
+                          <div className="flex justify-between items-start mb-4">
+                              <h4 className="font-bold text-xl text-slate-900">Shop Manager</h4>
+                              <span className="px-2 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold uppercase rounded">Plugin</span>
+                          </div>
+                          <p className="text-slate-500 text-sm mb-6">Kelola inventori dan pesanan toko online Anda langsung dari dasbor Orion.</p>
+                          <button className="w-full py-2 bg-slate-100 text-slate-600 rounded-lg font-bold text-sm hover:bg-slate-200 transition">Coming Soon</button>
+                      </div>
+                  </div>
+
+                  {/* Plugin 2 */}
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+                      <div className="h-48 bg-slate-200 relative">
+                          <img src="/plugins/orion-pdf-reader.png" alt="PDF Reader" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-6">
+                          <div className="flex justify-between items-start mb-4">
+                              <h4 className="font-bold text-xl text-slate-900">PDF Reader</h4>
+                              <span className="px-2 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold uppercase rounded">Plugin</span>
+                          </div>
+                          <p className="text-slate-500 text-sm mb-6">Integrasikan pembaca PDF interaktif untuk dokumen teknis di situs Anda.</p>
+                          <button className="w-full py-2 bg-slate-100 text-slate-600 rounded-lg font-bold text-sm hover:bg-slate-200 transition">Coming Soon</button>
+                      </div>
+                  </div>
+              </div>
           </div>
       </section>
     </div>

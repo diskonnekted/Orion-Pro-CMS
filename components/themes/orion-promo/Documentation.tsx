@@ -70,7 +70,22 @@ export default function Documentation() {
                                         <span className="font-medium text-sm">Fitur Utama</span>
                                     </a>
                                 </li>
-                                {/* Additional items omitted for brevity but can be added */}
+                                <li>
+                                    <a href="#instalasi" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all group">
+                                        <span className="w-8 h-8 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-xs group-hover:bg-green-600 group-hover:text-white transition-colors">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                        </span>
+                                        <span className="font-medium text-sm">Instalasi</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#manajemen-iot" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all group">
+                                        <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-xs group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                                        </span>
+                                        <span className="font-medium text-sm">Manajemen IoT</span>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -87,16 +102,65 @@ export default function Documentation() {
                         </div>
                         <div className="prose prose-slate max-w-none">
                             <p className="text-lg leading-relaxed text-slate-600 mb-6">
-                                Orion CMS adalah Content Management System modern yang dirancang untuk kecepatan, keamanan, dan kemudahan penggunaan. Dibangun dengan arsitektur modular yang fleksibel, Orion memungkinkan Anda membuat berbagai jenis website mulai dari blog pribadi, portofolio, hingga portal berita berskala besar.
+                                Orion Pro CMS adalah platform manajemen konten tingkat lanjut yang dirancang khusus untuk pengembang IoT dan otomasi. Dibangun di atas Next.js 15, platform ini menawarkan kecepatan luar biasa dan skalabilitas tinggi.
                             </p>
                             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
                                 <h4 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    Filosofi Kami
+                                    Tujuan Kami
                                 </h4>
                                 <p className="text-blue-800 m-0">
-                                    "Software seharusnya tidak menghalangi kreativitas. Orion CMS hadir untuk menghilangkan hambatan teknis sehingga Anda bisa fokus pada konten."
+                                    Memberikan kendali penuh kepada praktisi IoT dalam mengelola data sensor, visualisasi real-time, dan kontrol perangkat dalam satu dasbor terpusat.
                                 </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="instalasi" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-12 rounded-2xl bg-green-600 text-white flex items-center justify-center shadow-lg shadow-green-500/30">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            </div>
+                            <h2 className="text-3xl font-bold text-slate-900">Langkah Instalasi</h2>
+                        </div>
+                        <div className="prose prose-slate max-w-none text-slate-600">
+                            <ol className="space-y-4">
+                                <li>
+                                    <strong>Persiapan Environment:</strong> Pastikan Anda telah menginstal Node.js v18+ dan MySQL v8.0+.
+                                </li>
+                                <li>
+                                    <strong>Ekstrak Paket:</strong> Unduh paket Orion Pro dari area download dan ekstrak ke direktori server Anda.
+                                </li>
+                                <li>
+                                    <strong>Konfigurasi Database:</strong> Buat database baru di MySQL dan sesuaikan file <code>.env</code> dengan kredensial Anda.
+                                </li>
+                                <li>
+                                    <strong>Menjalankan Aplikasi:</strong> Jalankan perintah <code>npm install</code> diikuti dengan <code>npm run dev</code> untuk memulai server pengembangan.
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <section id="manajemen-iot" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-12 rounded-2xl bg-orange-600 text-white flex items-center justify-center shadow-lg shadow-orange-500/30">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                            </div>
+                            <h2 className="text-3xl font-bold text-slate-900">Manajemen IoT</h2>
+                        </div>
+                        <div className="prose prose-slate max-w-none text-slate-600">
+                            <p className="mb-4">
+                                Orion Pro menyertakan modul IoT bawaan yang mendukung berbagai protokol komunikasi.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+                                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-800 mb-2">Device Token</h4>
+                                    <p className="text-sm">Setiap perangkat menggunakan token unik untuk otentikasi API yang aman.</p>
+                                </div>
+                                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-800 mb-2">Telemetry Data</h4>
+                                    <p className="text-sm">Penyimpanan data sensor terstruktur dalam format JSON untuk fleksibilitas maksimal.</p>
+                                </div>
                             </div>
                         </div>
                     </section>

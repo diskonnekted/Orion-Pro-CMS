@@ -21,7 +21,7 @@ const availableThemes = [
     id: 'orion-school', 
     name: 'Orion School', 
     description: 'Academic Institution & School Management',
-    screenshot: '/themes/orion-school.png'
+    screenshot: 'https://images.unsplash.com/photo-152305085306e-8c3d3e7d9f3f?auto=format&fit=crop&w=800&q=80'
   },
   { 
     id: 'orion-portfolio', 
@@ -33,43 +33,43 @@ const availableThemes = [
     id: 'smartvillage', 
     name: 'Smart Village', 
     description: 'Specialized theme for Smart Village and IoT monitoring',
-    screenshot: '/themes/smartvillage.png'
+    screenshot: '/smart farm.jpg'
   },
   { 
     id: 'orion-ews-pro', 
     name: 'Orion EWS Pro', 
     description: 'Flood, Landslide, Quake & Tsunami Detection',
-    screenshot: 'https://images.unsplash.com/photo-1454789476662-53eb23ba5907?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/ews03.jpg'
   },
   { 
     id: 'orion-load-scanner', 
     name: 'Orion Load Scanner', 
     description: 'Mining Material Volume Calculation',
-    screenshot: 'https://images.unsplash.com/photo-1579536125432-849544c06208?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/loadscanner.jpg'
   },
   { 
     id: 'orion-smarthome', 
     name: 'Orion Smarthome', 
     description: 'Integrated Home Automation',
-    screenshot: 'https://images.unsplash.com/photo-1558002038-1091a1661116?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/smart-home.jpg'
   },
   { 
     id: 'orion-smartpark', 
     name: 'Orion Smartpark', 
     description: 'Intelligent Parking System',
-    screenshot: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/smart-parking.jpg'
   },
   { 
     id: 'orion-weather', 
     name: 'Weather Station', 
     description: 'Real-time Environmental Monitoring',
-    screenshot: 'https://images.unsplash.com/photo-1590552515252-3a5a1bce7bed?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/weatherstation.jpg'
   },
   { 
     id: 'orion-livecam', 
     name: 'Orion Livecam', 
     description: 'Live CCTV Streaming Integration',
-    screenshot: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/livecam.jpg'
   },
   { 
     id: 'orion-automation', 
@@ -81,7 +81,7 @@ const availableThemes = [
     id: 'orion-machine-monitor', 
     name: 'Machine Monitor', 
     description: 'Industrial Equipment Health Check',
-    screenshot: 'https://images.unsplash.com/photo-1565514020176-db7933096053?auto=format&fit=crop&w=800&q=80'
+    screenshot: '/machine-monitor.jpg'
   }
 ];
 

@@ -66,7 +66,7 @@ export default function Hero() {
               </div>
               <div className="mt-8 rounded-lg overflow-hidden border border-slate-100">
                 {/* Fallback visual using available asset */}
-                <img src="/assets/img/CMS-ORION-ONE.png" alt="Orion Dashboard" className="w-full h-auto object-cover" />
+                <img src="/command-center.jpg" alt="Orion Dashboard" className="w-full h-auto object-cover" />
               </div>
             </div>
 
